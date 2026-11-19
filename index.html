@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <title>Hamza Tauqeer | Founder, Idea Section</title>
+ <meta name="description"
+  content="Hamza Tauqeer, founder of Idea Section, looks at one costly workflow in a free 30-minute audit and tells you whether to automate it, fix it, or leave it alone.">
+ <meta property="og:title" content="Hamza Tauqeer | Founder, Idea Section">
+ <meta property="og:description" content="A free 30-minute workflow audit. Automate it, fix it, or leave it alone.">
+ <meta property="og:type" content="profile">
+ <meta name="color-scheme" content="light dark">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;700;800&display=swap"
+  rel="stylesheet">
+ <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Hamza Tauqeer","alternateName":"iamhamzatauqeer","jobTitle":"Founder","description":"Software founder and engineer. Helps businesses find costly workflows and decide whether to automate, fix, or leave them alone.","worksFor":{"@type":"Organization","name":"Idea Section","url":"https://ideasection.com"},"address":{"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},"knowsAbout":["Software architecture","Workflow automation","Cloud migration","Multi-tenant SaaS","Responsible AI adoption"],"sameAs":["https://www.linkedin.com/in/iamhamzatauqeer/","https://x.com/IamHamzaTauqeer","https://www.instagram.com/iamhamzatauqeer/","https://web.facebook.com/IAmHamzaTauqeer"]}
+</script>
+ <style>
+  :root {
+   box-sizing: border-box;
+   padding-top: env(safe-area-inset-top, 0px);
+   padding-bottom: env(safe-area-inset-bottom, 0px);
+   --bg: #F5F3EE;
+   --surface: #ECE9E1;
+   --text: #17252B;
+   --muted: #4A5A60;
+   --line: #D9D5CC;
+   --accent: #477568;
+   --on-accent: #F5F3EE;
+   --accent-hover: #386052;
+   color-scheme: light dark
+  }
+
+  @media (prefers-color-scheme:dark) {
+   :root:not([data-theme="light"]) {
+    --bg: #17252B;
+    --surface: #1E3037;
+    --text: #F5F3EE;
+    --muted: #B9C3C4;
+    --line: #2E434B;
+    --accent: #7FB3A2;
+    --on-accent: #17252B;
+    --accent-hover: #98C5B6
+   }
+  }
+
+  :root[data-theme="dark"] {
+   --bg: #17252B;
+   --surface: #1E3037;
+   --text: #F5F3EE;
+   --muted: #B9C3C4;
+   --line: #2E434B;
+   --accent: #7FB3A2;
+   --on-accent: #17252B;
+   --accent-hover: #98C5B6
+  }
+
+  html {
+   scroll-padding-top: env(safe-area-inset-top, 0px);
+   scroll-behavior: smooth
+  }
+
+  *,
+  *::before,
+  *::after {
+   box-sizing: inherit
+  }
+
+  body {
+   margin: 0;
+   background: var(--bg);
+   color: var(--text);
+   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+   font-size: 1.0625rem;
+   line-height: 1.65;
+   -webkit-font-smoothing: antialiased
+  }
+
+  h1,
+  h2,
+  h3 {
+   font-family: "Manrope", "Inter", system-ui, sans-serif;
+   line-height: 1.15;
+   margin: 0;
+   letter-spacing: -.02em
+  }
+
+  a {
+   color: var(--accent);
+   text-underline-offset: 3px
+  }
+
+  a:hover {
+   color: var(--accent-hover)
+  }
+
+  :focus-visible {
+   outline: 3px solid var(--accent);
+   outline-offset: 3px;
+   border-radius: 4px
+  }
+
+  .wrap {
+   width: 100%;
+   max-width: 1040px;
+   margin: 0 auto;
+   padding: 0 1.5rem
+  }
+
+  header.top {
+   padding: 1.5rem 0
+  }
+
+  header.top .wrap {
+   display: flex;
+   flex-wrap: wrap;
+   gap: .75rem 2rem;
+   justify-content: space-between;
+   align-items: baseline
+  }
+
+  .mark {
+   font-family: "Manrope", sans-serif;
+   font-weight: 800;
+   font-size: 1.25rem;
+   letter-spacing: -.03em;
+   color: var(--text);
+   text-decoration: none
+  }
+
+  .mark b {
+   color: var(--accent);
+   font-weight: 800
+  }
+
+  nav {
+   display: flex;
+   flex-wrap: wrap;
+   gap: .5rem 1.5rem;
+   font-size: .95rem
+  }
+
+  nav a {
+   color: var(--muted);
+   text-decoration: none
+  }
+
+  nav a:hover {
+   color: var(--text);
+   text-decoration: underline
+  }
+
+  .hero {
+   padding: clamp(3rem, 9vw, 6rem) 0 clamp(3rem, 7vw, 5rem)
+  }
+
+  .hero h1 {
+   font-size: clamp(2rem, 5.4vw, 3.5rem);
+   font-weight: 800;
+   max-width: 19em
+  }
+
+  .hero .lede {
+   max-width: 36em;
+   margin: 1.5rem 0 0;
+   color: var(--muted);
+   font-size: 1.15rem
+  }
+
+  .hero .lede+.lede {
+   margin-top: 1rem
+  }
+
+  .who {
+   margin: 2rem 0 0;
+   max-width: 36em
+  }
+
+  .cta-row {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 1rem 1.5rem;
+   margin-top: 2rem
+  }
+
+  .btn {
+   display: inline-block;
+   background: var(--accent);
+   color: var(--on-accent);
+   font-family: "Manrope", sans-serif;
+   font-weight: 700;
+   font-size: 1.0625rem;
+   padding: .95rem 1.6rem;
+   border: 0;
+   border-radius: 6px;
+   text-decoration: none;
+   cursor: pointer;
+   transition: background-color .15s ease
+  }
+
+  .btn:hover {
+   background: var(--accent-hover);
+   color: var(--on-accent)
+  }
+
+  .fine {
+   margin: .9rem 0 0;
+   font-size: .9375rem;
+   color: var(--muted)
+  }
+
+  .facts {
+   display: flex;
+   flex-wrap: wrap;
+   gap: .5rem 2.5rem;
+   margin: 2.75rem 0 0;
+   padding: 1.25rem 0 0;
+   border-top: 1px solid var(--line);
+   list-style: none;
+   color: var(--muted);
+   font-size: .975rem
+  }
+
+  .facts strong {
+   color: var(--text);
+   font-weight: 600
+  }
+
+  section.s {
+   padding: clamp(3rem, 7vw, 5rem) 0;
+   border-top: 1px solid var(--line)
+  }
+
+  section.s .wrap {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 1.5rem
+  }
+
+  section.s>.wrap>h2 {
+   font-size: 1.5rem
+  }
+
+  .body {
+   max-width: 40em
+  }
+
+  .body p {
+   margin: 0 0 1.1rem
+  }
+
+  .tint {
+   background: var(--surface)
+  }
+
+  .intro {
+   margin: 0 0 1.75rem;
+   color: var(--muted)
+  }
+
+  fieldset {
+   border: 0;
+   margin: 0 0 1.5rem;
+   padding: 0
+  }
+
+  legend {
+   font-family: "Manrope", sans-serif;
+   font-weight: 700;
+   padding: 0;
+   margin-bottom: .6rem
+  }
+
+  .opts {
+   display: flex;
+   flex-wrap: wrap;
+   gap: .6rem
+  }
+
+  .opts label {
+   display: inline-flex;
+   align-items: center;
+   gap: .55rem;
+   padding: .6rem .95rem;
+   border: 1px solid var(--line);
+   border-radius: 6px;
+   background: var(--bg);
+   cursor: pointer;
+   font-size: .975rem
+  }
+
+  .opts label:has(input:checked) {
+   border-color: var(--accent);
+   box-shadow: inset 0 0 0 1px var(--accent)
+  }
+
+  .opts input {
+   accent-color: var(--accent);
+   margin: 0
+  }
+
+  #result {
+   margin-top: 1.75rem;
+   padding-top: 1.5rem;
+   border-top: 1px solid var(--line)
+  }
+
+  #result:empty {
+   display: none
+  }
+
+  #result h3 {
+   font-size: 1.5rem;
+   margin-bottom: .5rem
+  }
+
+  #result p {
+   margin: 0 0 1rem
+  }
+
+  .story {
+   padding: 0 0 2.5rem;
+   margin: 0 0 2.5rem;
+   border-bottom: 1px solid var(--line)
+  }
+
+  .story:last-child {
+   border-bottom: 0;
+   margin-bottom: 0;
+   padding-bottom: 0
+  }
+
+  .story h3 {
+   font-size: 1.375rem;
+   margin-bottom: .3rem
+  }
+
+  .story .r {
+   color: var(--muted);
+   margin: 0 0 1rem;
+   font-size: .975rem
+  }
+
+  .steps {
+   margin: 1.25rem 0 1.5rem;
+   padding-left: 1.25rem
+  }
+
+  .steps li {
+   margin-bottom: .5rem
+  }
+
+  .beliefs {
+   list-style: none;
+   margin: 0;
+   padding: 0
+  }
+
+  .beliefs li {
+   padding: 1.1rem 0;
+   border-top: 1px solid var(--line)
+  }
+
+  .beliefs li:first-child {
+   border-top: 0;
+   padding-top: 0
+  }
+
+  .beliefs b {
+   font-family: "Manrope", sans-serif;
+   font-weight: 700;
+   display: block;
+   margin-bottom: .15rem
+  }
+
+  .beliefs span {
+   color: var(--muted)
+  }
+
+  dl.bg {
+   margin: 0
+  }
+
+  dl.bg dt {
+   font-family: "Manrope", sans-serif;
+   font-weight: 700;
+   margin-top: 1.25rem
+  }
+
+  dl.bg dt:first-child {
+   margin-top: 0
+  }
+
+  dl.bg dd {
+   margin: .2rem 0 0;
+   color: var(--muted)
+  }
+
+  footer {
+   padding: 2.5rem 0 3rem;
+   color: var(--muted);
+   font-size: .9375rem;
+   border-top: 1px solid var(--line)
+  }
+
+  footer .wrap {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: 1rem 2rem
+  }
+
+  footer p {
+   margin: 0;
+   max-width: 34em
+  }
+
+  footer ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+   gap: .5rem 1.25rem
+  }
+
+  @media (min-width:860px) {
+   section.s .wrap {
+    grid-template-columns: 220px 1fr;
+    gap: 3rem
+   }
+  }
+
+  @media (prefers-reduced-motion:reduce) {
+   html {
+    scroll-behavior: auto
+   }
+
+   .btn {
+    transition: none
+   }
+  }
+ </style>
+</head>
+
+<body>
+ <header class="top">
+  <div class="wrap">
+   <a class="mark" href="#top">hamza <b>tauqeer</b></a>
+   <nav aria-label="Page sections"><a href="#check">Try the check</a><a href="#work">Work I’ve led</a><a
+     href="#audit">Free audit</a><a href="#thinking">How I think</a><a href="#background">Background</a></nav>
+  </div>
+ </header>
+
+ <main id="top">
+  <section class="hero">
+   <div class="wrap">
+    <h1>A task your team repeats by hand every week is a bill you pay in hours.</h1>
+    <p class="lede">Nobody sees the invoice. The hours get absorbed, the errors get fixed quietly, and the one person
+     who knows how it works can’t take a holiday.</p>
+    <p class="lede">I’m Hamza Tauqeer, founder of Idea Section. In a free 30-minute audit I look at one of those
+     workflows, put a number on it, and tell you whether to automate it, fix it, or leave it alone. Leaving it alone is
+     a real answer, and I’ll say so when it’s true.</p>
+    <div class="cta-row"><a class="btn" href="https://gumdrop.ai/hamzatauqeer?rebrand_from=supercal" target="_blank"
+      rel="noopener">Book a free workflow audit</a><a href="#check">Or try the 2-minute check first</a></div>
+    <p class="fine">30 minutes. You keep the written summary either way. I take three audits a month.</p>
+    <ul class="facts">
+     <li><strong>Since 2017</strong> building and fixing software</li>
+     <li><strong>6M+</strong> connected devices on a platform I led the backend for</li>
+     <li><strong>Up to 14</strong> engineers led on one platform</li>
+    </ul>
+   </div>
+  </section>
+
+  <section class="s tint" id="check">
+   <div class="wrap">
+    <h2>Try it on your own workflow</h2>
+    <div class="body">
+     <p class="intro">Think of one task that bothers you. Answer five questions and I’ll tell you which way I’d lean.
+      This is a rough first read from five answers. The audit looks at the real workflow.</p>
+     <form id="check-form" novalidate>
+      <fieldset>
+       <legend>How often does the task happen?</legend>
+       <div class="opts"><label><input type="radio" name="q1" value="w"> Every week or more</label><label><input
+          type="radio" name="q1" value="m"> Monthly or less</label></div>
+      </fieldset>
+      <fieldset>
+       <legend>Are the steps the same every time?</legend>
+       <div class="opts"><label><input type="radio" name="q2" value="y"> Yes, same steps</label><label><input
+          type="radio" name="q2" value="n"> No, it takes judgment</label></div>
+      </fieldset>
+      <fieldset>
+       <legend>What hurts most?</legend>
+       <div class="opts"><label><input type="radio" name="q3" value="manual"> People doing manual
+         work</label><label><input type="radio" name="q3" value="system"> A system that’s slow or keeps breaking</label>
+       </div>
+      </fieldset>
+      <fieldset>
+       <legend>What happens when it goes wrong?</legend>
+       <div class="opts"><label><input type="radio" name="q4" value="high"> It costs real money or creates
+         risk</label><label><input type="radio" name="q4" value="low"> Someone fixes it later</label></div>
+      </fieldset>
+      <fieldset>
+       <legend>Do you know what it costs you today?</legend>
+       <div class="opts"><label><input type="radio" name="q5" value="known"> Roughly, in hours or
+         dollars</label><label><input type="radio" name="q5" value="unknown"> Not really</label></div>
+      </fieldset>
+      <button class="btn" type="submit">Show me which way I’d lean</button>
+     </form>
+     <div id="result" role="status" aria-live="polite" tabindex="-1"></div>
+    </div>
+   </div>
+  </section>
+
+  <section class="s" id="work">
+   <div class="wrap">
+    <h2>Work I’ve led</h2>
+    <div class="body">
+     <p class="fine" style="margin-top:0">Client names stay private.</p>
+     <article class="story">
+      <h3>We rebuilt the same cloud stack 32 times</h3>
+      <p class="r">Technical lead, 12 to 14 engineers</p>
+      <p>The first version ran on a managed serverless framework built for a team of one or two. Then 12 to 14 engineers
+       started deploying to it. Stacks locked, rollbacks failed, and about 32 times in a few months we tore everything
+       down and rebuilt it. The team lost 24 to 30 hours a week to troubleshooting and regression testing.</p>
+      <p>I brought evidence: every failure, the hours it cost, and the framework’s known limits, checked with a former
+       AWS engineer. I took it to the client’s principal solution architect, who had 16+ years of experience. He
+       approved the change.</p>
+      <p>We moved the backend to roughly 80% containers and 20% serverless functions and left the frontend alone,
+       because rebuilding both would have blown the MVP budget. The rebuilds stopped. Each brand’s data stayed isolated
+       from the others, and the team could ship independently again.</p>
+     </article>
+     <article class="story">
+      <h3>A dashboard out of sync, and a client who began to doubt us</h3>
+      <p class="r">Team lead and delivery lead, on a smart-home platform with 6M+ connected devices</p>
+      <p>At the second meeting after kickoff, the client’s energy dashboard no longer matched reality. He started
+       questioning whether we could deliver. The backend and data teams were each pointing at the other.</p>
+      <p>I was the lead, so it was mine to fix. I took it to my manager and director, then sat down with the data lead
+       directly. I told him that if the project works we all succeed, and if it fails we all fail, and that backend
+       would give him whatever support he needed. We delivered the milestone on time.</p>
+      <p>The same project moved a legacy backend from AWS to Azure, serving roughly 1M+ users, and was load-tested with
+       1M devices in batch.</p>
+     </article>
+     <article class="story">
+      <h3>Receipts read by AI, checked by a person</h3>
+      <p class="r">Delivered the MVP of an AI bookkeeping platform</p>
+      <p>Someone has to type every receipt into the books. We built a custom OCR model to read them and a review screen
+       where a person confirms or corrects each field. Every correction goes back into training, so the model improves
+       over time.</p>
+      <p>The person stays in the loop on purpose. I think AI should do the typing, and someone accountable should check
+       the result.</p>
+     </article>
+    </div>
+   </div>
+  </section>
+
+  <section class="s tint" id="audit">
+   <div class="wrap">
+    <h2>The free workflow audit</h2>
+    <div class="body">
+     <p>One workflow. Thirty minutes. A written answer.</p>
+     <ol class="steps">
+      <li>You book a time and answer a few short questions about the workflow.</li>
+      <li>On the call, you walk me through how it works today and what it costs you.</li>
+      <li>Afterwards you get a short written summary: where time and money are leaking, and whether I’d automate it, fix
+       it, or leave it alone.</li>
+     </ol>
+     <p>If it makes sense to work together after that, I’ll say so. If it doesn’t, you keep the summary.</p>
+     <p>It fits businesses of roughly 20 to 200 people with a manual or fragmented process. It won’t help if you only
+      want a quote for a project that’s already fully specified. I take three audits a month so each one gets proper
+      attention.</p>
+     <p style="margin-top:1.5rem"><a class="btn" href="https://gumdrop.ai/hamzatauqeer?rebrand_from=supercal"
+       target="_blank" rel="noopener">Book a free workflow audit</a></p>
+     <p class="fine">No cost. No credit card. Takes about a minute to book.</p>
+    </div>
+   </div>
+  </section>
+
+  <section class="s" id="thinking">
+   <div class="wrap">
+    <h2>How I think</h2>
+    <ul class="beliefs body">
+     <li><b>Validate before you invest.</b><span>Too many people spend serious money building an idea nobody
+       checked.</span></li>
+     <li><b>Understand the problem before you build.</b><span>A checklist of deliverables can be fully delivered while
+       the original problem stays open.</span></li>
+     <li><b>Sometimes the right answer is to build nothing yet.</b><span>Other times it’s improving what you already
+       have, or automating one step.</span></li>
+     <li><b>Know what you’re paying for.</b><span>You should hear why something is being built, what it costs, and what
+       the trade-offs are, in plain language.</span></li>
+     <li><b>Keep a person accountable for AI.</b><span>AI output needs checking in context before it drives a
+       decision.</span></li>
+    </ul>
+   </div>
+  </section>
+
+  <section class="s tint" id="background">
+   <div class="wrap">
+    <h2>Background</h2>
+    <dl class="bg body">
+     <dt>How I got here</dt>
+     <dd>I started in 2017 as an intern. Since then I’ve built the backend of a telehealth platform, moved from PHP to
+      the JavaScript stack, built SaaS products, mentored engineers, and given an upskilling lecture to a company’s
+      employees. I’ve led teams of up to 14 engineers and worked with colleagues in the US, UK, Australia, Singapore,
+      Ukraine, Spain, and Dubai.</dd>
+     <dt>How I work</dt>
+     <dd>I’m the founder and I’m responsible for delivery. When a project needs more hands, I bring in engineers, QA,
+      and designers I’ve worked with before, per project.</dd>
+     <dt>Courses completed</dt>
+     <dd>Claude 101, Claude Code 101, and Introduction to Claude Cowork (Anthropic, 2026). Business Analysis for
+      Pre-sales Professionals and Beginning Amazon Web Services (10Pearls University, 2024).</dd>
+     <dt>Where I’m based</dt>
+     <dd>Lahore, Pakistan. I work with clients in the US, Europe, and Australia.</dd>
+    </dl>
+   </div>
+  </section>
+ </main>
+
+ <footer>
+  <div class="wrap">
+   <p>Hamza Tauqeer, software founder at Idea Section, Lahore. © 2026</p>
+   <ul>
+    <li><a href="https://www.linkedin.com/in/iamhamzatauqeer/" target="_blank" rel="me noopener">LinkedIn</a></li>
+    <li><a href="https://x.com/IamHamzaTauqeer" target="_blank" rel="me noopener">X</a></li>
+    <li><a href="https://ideasection.com" target="_blank" rel="noopener">Idea Section</a></li>
+   </ul>
+  </div>
+ </footer>
+
+ <script>
+  (function () {
+   var f = document.getElementById("check-form"), out = document.getElementById("result");
+   if (!f || !out) return;
+   var link = "https://gumdrop.ai/hamzatauqeer?rebrand_from=supercal";
+   var cta = "<p><a class=\"btn\" href=\"" + link + "\" target=\"_blank\" rel=\"noopener\">Book a free workflow audit</a></p>";
+   function val(n) { var c = f.querySelector("input[name=" + n + "]:checked"); return c ? c.value : null }
+   f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var a = { q1: val("q1"), q2: val("q2"), q3: val("q3"), q4: val("q4"), q5: val("q5") }, ok = true;
+    for (var k in a) { if (a[k] === null) ok = false }
+    if (!ok) { out.innerHTML = "<p>Please answer all five questions.</p>"; return }
+    var h, t;
+    if (a.q5 === "unknown") { h = "Leave it alone for now. Measure it first."; t = "Without a number you can’t tell whether a change will pay off. Count the hours and the errors for two weeks. That is the first thing I do in an audit." }
+    else if (a.q3 === "system") { h = "Fix it."; t = "When the system itself is slow or keeps breaking, the cause is usually a data model, a slow query, a deployment problem, or a handoff between teams. Repairing what you have is often cheaper than replacing it." }
+    else if (a.q1 === "w" && a.q2 === "y") { h = "Automate it."; t = "A weekly task with the same steps every time is the best candidate for automation." + (a.q4 === "high" ? " The mistakes are costly, so keep a person checking each result. The software should not decide alone." : " Mistakes are cheap here, so you can start small and widen it as you trust it.") }
+    else { h = "Leave it alone for now."; t = "Rare tasks and judgment-heavy tasks seldom repay the cost of automating them. A clearer checklist or a better handoff may do more than new software." }
+    out.innerHTML = "<h3>" + h + "</h3><p>" + t + "</p>" + cta;
+    out.focus();
+   });
+  })();
+ </script>
+</body>
+
+</html>
