@@ -30,6 +30,7 @@
    --muted: #4A5A60;
    --line: #D9D5CC;
    --accent: #477568;
+   --accent-text: #3D6558;
    --on-accent: #F5F3EE;
    --accent-hover: #386052;
    color-scheme: light dark
@@ -43,6 +44,7 @@
     --muted: #B9C3C4;
     --line: #2E434B;
     --accent: #7FB3A2;
+    --accent-text: #7FB3A2;
     --on-accent: #17252B;
     --accent-hover: #98C5B6
    }
@@ -55,6 +57,7 @@
    --muted: #B9C3C4;
    --line: #2E434B;
    --accent: #7FB3A2;
+   --accent-text: #7FB3A2;
    --on-accent: #17252B;
    --accent-hover: #98C5B6
   }
@@ -90,12 +93,12 @@
   }
 
   a {
-   color: var(--accent);
+   color: var(--accent-text);
    text-underline-offset: 3px
   }
 
   a:hover {
-   color: var(--accent-hover)
+   color: var(--text)
   }
 
   :focus-visible {
@@ -112,7 +115,7 @@
   }
 
   header.top {
-   padding: 1.5rem 0
+   padding: 1.75rem 0
   }
 
   header.top .wrap {
@@ -154,40 +157,6 @@
    text-decoration: underline
   }
 
-  .hero {
-   padding: clamp(3rem, 9vw, 6rem) 0 clamp(3rem, 7vw, 5rem)
-  }
-
-  .hero h1 {
-   font-size: clamp(2rem, 5.4vw, 3.5rem);
-   font-weight: 800;
-   max-width: 19em
-  }
-
-  .hero .lede {
-   max-width: 36em;
-   margin: 1.5rem 0 0;
-   color: var(--muted);
-   font-size: 1.15rem
-  }
-
-  .hero .lede+.lede {
-   margin-top: 1rem
-  }
-
-  .who {
-   margin: 2rem 0 0;
-   max-width: 36em
-  }
-
-  .cta-row {
-   display: flex;
-   flex-wrap: wrap;
-   align-items: center;
-   gap: 1rem 1.5rem;
-   margin-top: 2rem
-  }
-
   .btn {
    display: inline-block;
    background: var(--accent);
@@ -214,53 +183,141 @@
    color: var(--muted)
   }
 
-  .facts {
+  .chips {
    display: flex;
    flex-wrap: wrap;
-   gap: .5rem 2.5rem;
-   margin: 2.75rem 0 0;
-   padding: 1.25rem 0 0;
-   border-top: 1px solid var(--line);
+   gap: .45rem;
    list-style: none;
-   color: var(--muted);
-   font-size: .975rem
+   margin: 0;
+   padding: 0
   }
 
-  .facts strong {
-   color: var(--text);
-   font-weight: 600
+  .chips li {
+   font-size: .8125rem;
+   line-height: 1.3;
+   padding: .3rem .75rem;
+   border: 1px solid var(--line);
+   border-radius: 999px;
+   color: var(--muted);
+   background: var(--bg)
+  }
+
+  .hero {
+   padding: clamp(4rem, 12vw, 8.5rem) 0 clamp(4rem, 10vw, 7rem)
+  }
+
+  .hero .wrap {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 3.5rem;
+   align-items: center
+  }
+
+  .hero h1 {
+   font-size: clamp(2.1rem, 5vw, 3.4rem);
+   font-weight: 800;
+   max-width: 13em
+  }
+
+  .hero .lede {
+   max-width: 27em;
+   margin: 1.75rem 0 0;
+   color: var(--muted);
+   font-size: 1.15rem
+  }
+
+  .cta-row {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 1rem 1.75rem;
+   margin-top: 2.5rem
+  }
+
+  .hero .chips {
+   margin-top: 3rem
+  }
+
+  .fork {
+   width: 100%;
+   max-width: 380px;
+   height: auto;
+   justify-self: start
+  }
+
+  .fork .ln {
+   fill: none;
+   stroke: var(--line);
+   stroke-width: 2
+  }
+
+  .fork .nd {
+   fill: var(--accent)
+  }
+
+  .fork .en {
+   fill: var(--bg);
+   stroke: var(--accent);
+   stroke-width: 2.5
+  }
+
+  .fork text {
+   fill: var(--text);
+   font-family: "Manrope", sans-serif;
+   font-weight: 700;
+   font-size: 18px
+  }
+
+  .fork .sm {
+   fill: var(--muted);
+   font-weight: 500;
+   font-size: 14px
   }
 
   section.s {
-   padding: clamp(3rem, 7vw, 5rem) 0;
+   padding: clamp(3.5rem, 8vw, 6rem) 0;
    border-top: 1px solid var(--line)
   }
 
   section.s .wrap {
    display: grid;
    grid-template-columns: 1fr;
-   gap: 1.5rem
+   gap: 1.75rem
   }
 
   section.s>.wrap>h2 {
    font-size: 1.5rem
   }
 
-  .body {
-   max-width: 40em
+  section.s.wide .wrap {
+   display: block
   }
 
-  .body p {
-   margin: 0 0 1.1rem
+  section.s.wide .wrap>h2 {
+   margin-bottom: .5rem
   }
 
   .tint {
    background: var(--surface)
   }
 
-  .intro {
-   margin: 0 0 1.75rem;
-   color: var(--muted)
+  .tint .chips li,
+  .tint .opts label {
+   background: var(--surface)
+  }
+
+  .sub {
+   margin: 0 0 2.25rem;
+   color: var(--muted);
+   max-width: 34em
+  }
+
+  .body {
+   max-width: 38em
+  }
+
+  .body p {
+   margin: 0 0 1.1rem
   }
 
   fieldset {
@@ -289,7 +346,6 @@
    padding: .6rem .95rem;
    border: 1px solid var(--line);
    border-radius: 6px;
-   background: var(--bg);
    cursor: pointer;
    font-size: .975rem
   }
@@ -323,62 +379,254 @@
    margin: 0 0 1rem
   }
 
-  .story {
-   padding: 0 0 2.5rem;
-   margin: 0 0 2.5rem;
-   border-bottom: 1px solid var(--line)
+  .cards {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+   gap: 1.25rem;
+   align-items: start
   }
 
-  .story:last-child {
-   border-bottom: 0;
-   margin-bottom: 0;
-   padding-bottom: 0
+  details.card {
+   border: 1px solid var(--line);
+   border-radius: 10px;
+   background: var(--surface)
   }
 
-  .story h3 {
-   font-size: 1.375rem;
-   margin-bottom: .3rem
+  details.card summary {
+   list-style: none;
+   cursor: pointer;
+   padding: 1.5rem
   }
 
-  .story .r {
+  details.card summary::-webkit-details-marker {
+   display: none
+  }
+
+  .card .role {
+   font-size: .875rem;
    color: var(--muted);
+   margin: 0 0 .6rem
+  }
+
+  .card h3 {
+   font-size: 1.25rem;
+   margin-bottom: .6rem
+  }
+
+  .card .gist {
    margin: 0 0 1rem;
+   color: var(--muted);
    font-size: .975rem
   }
 
-  .steps {
-   margin: 1.25rem 0 1.5rem;
-   padding-left: 1.25rem
+  .card .key {
+   font-family: "Manrope", sans-serif;
+   font-weight: 800;
+   font-size: 1.0625rem;
+   margin: 0 0 1.1rem
   }
 
-  .steps li {
-   margin-bottom: .5rem
+  .card .chips {
+   margin-bottom: 1.25rem
   }
 
-  .beliefs {
+  .card .chips li {
+   background: var(--bg)
+  }
+
+  .card .tog {
+   font-weight: 600;
+   color: var(--accent-text);
+   font-size: .95rem
+  }
+
+  .card .tog::after {
+   content: "Read the story"
+  }
+
+  details.card[open] .tog::after {
+   content: "Close"
+  }
+
+  .card .more {
+   padding: 0 1.5rem 1.5rem;
+   border-top: 1px solid var(--line);
+   padding-top: 1.25rem;
+   font-size: .975rem
+  }
+
+  .card .more p {
+   margin: 0 0 .9rem
+  }
+
+  .phases {
+   display: none
+  }
+
+  .steps7 {
    list-style: none;
    margin: 0;
-   padding: 0
+   padding: 0;
+   position: relative
   }
 
-  .beliefs li {
+  .steps7 li {
+   display: flex;
+   gap: 1rem;
+   padding-bottom: 1.5rem;
+   position: relative
+  }
+
+  .steps7 li:last-child {
+   padding-bottom: 0
+  }
+
+  .steps7::before {
+   content: "";
+   position: absolute;
+   left: 17px;
+   top: 18px;
+   bottom: 18px;
+   width: 2px;
+   background: var(--line)
+  }
+
+  .n {
+   flex: none;
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   border: 2px solid var(--accent);
+   background: var(--surface);
+   display: grid;
+   place-items: center;
+   font-family: "Manrope", sans-serif;
+   font-weight: 700;
+   font-size: .9rem;
+   position: relative;
+   z-index: 1
+  }
+
+  .steps7 li:nth-child(-n+3) .n {
+   background: var(--accent);
+   color: var(--on-accent)
+  }
+
+  .steps7 b {
+   font-family: "Manrope", sans-serif;
+   font-weight: 700;
+   display: block
+  }
+
+  .steps7 span.d {
+   display: block;
+   font-size: .875rem;
+   color: var(--muted);
+   line-height: 1.4;
+   margin-top: .15rem
+  }
+
+  .steps7 small {
+   display: block;
+   font-size: .8rem;
+   color: var(--muted);
+   margin-bottom: .15rem
+  }
+
+  .legend {
+   display: flex;
+   align-items: center;
+   gap: .6rem;
+   margin: 2.25rem 0 1.25rem;
+   font-size: .9rem;
+   color: var(--muted)
+  }
+
+  .legend i {
+   width: 14px;
+   height: 14px;
+   border-radius: 50%;
+   background: var(--accent);
+   flex: none
+  }
+
+  .after {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: .6rem 1rem;
+   margin: 0 0 1.5rem
+  }
+
+  .after span {
+   font-size: .95rem;
+   color: var(--muted)
+  }
+
+  .mini {
+   list-style: none;
+   margin: 0 0 2rem;
+   padding: 0;
+   display: grid;
+   gap: 1.25rem
+  }
+
+  .mini b {
+   font-family: "Manrope", sans-serif;
+   font-weight: 700;
+   display: block
+  }
+
+  .mini span {
+   color: var(--muted)
+  }
+
+  .fit {
+   display: grid;
+   gap: 1.25rem;
+   margin: 0 0 2rem;
+   padding: 1.25rem 0;
+   border-top: 1px solid var(--line);
+   border-bottom: 1px solid var(--line)
+  }
+
+  .fit b {
+   font-family: "Manrope", sans-serif;
+   font-weight: 700;
+   display: block
+  }
+
+  .fit span {
+   color: var(--muted);
+   font-size: .975rem
+  }
+
+  .holds {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: grid;
+   gap: 0
+  }
+
+  .holds li {
    padding: 1.1rem 0;
    border-top: 1px solid var(--line)
   }
 
-  .beliefs li:first-child {
+  .holds li:first-child {
    border-top: 0;
    padding-top: 0
   }
 
-  .beliefs b {
+  .holds b {
    font-family: "Manrope", sans-serif;
    font-weight: 700;
    display: block;
-   margin-bottom: .15rem
+   margin-bottom: .1rem
   }
 
-  .beliefs span {
+  .holds span {
    color: var(--muted)
   }
 
@@ -389,7 +637,7 @@
   dl.bg dt {
    font-family: "Manrope", sans-serif;
    font-weight: 700;
-   margin-top: 1.25rem
+   margin-top: 1.5rem
   }
 
   dl.bg dt:first-child {
@@ -397,15 +645,33 @@
   }
 
   dl.bg dd {
-   margin: .2rem 0 0;
+   margin: .35rem 0 0;
    color: var(--muted)
+  }
+
+  dl.bg dd.c {
+   margin-top: .6rem
+  }
+
+  .close {
+   padding: clamp(4rem, 9vw, 7rem) 0;
+   border-top: 1px solid var(--line);
+   background: var(--surface)
+  }
+
+  .close h2 {
+   font-size: clamp(1.75rem, 4vw, 2.5rem);
+   max-width: 14em
+  }
+
+  .close .cta-row {
+   margin-top: 2rem
   }
 
   footer {
    padding: 2.5rem 0 3rem;
    color: var(--muted);
-   font-size: .9375rem;
-   border-top: 1px solid var(--line)
+   font-size: .9375rem
   }
 
   footer .wrap {
@@ -429,10 +695,74 @@
    gap: .5rem 1.25rem
   }
 
+  @media (min-width:700px) {
+   .fit {
+    grid-template-columns: 1fr 1fr
+   }
+
+   .mini {
+    grid-template-columns: repeat(3, 1fr)
+   }
+
+   .holds {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem
+   }
+
+   .holds li:nth-child(2) {
+    border-top: 0;
+    padding-top: 0
+   }
+  }
+
   @media (min-width:860px) {
    section.s .wrap {
     grid-template-columns: 220px 1fr;
     gap: 3rem
+   }
+
+   .hero .wrap {
+    grid-template-columns: 1.15fr .85fr
+   }
+
+   .phases {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 1.25rem
+   }
+
+   .phases span {
+    border-top: 2px solid var(--line);
+    padding-top: .5rem;
+    margin: 0 .6rem;
+    font-size: .85rem;
+    color: var(--muted)
+   }
+
+   .steps7 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr)
+   }
+
+   .steps7::before {
+    left: calc(100%/14);
+    right: calc(100%/14);
+    top: 17px;
+    bottom: auto;
+    width: auto;
+    height: 2px
+   }
+
+   .steps7 li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: .7rem;
+    padding: 0 .5rem
+   }
+
+   .steps7 small {
+    display: none
    }
   }
 
@@ -452,29 +782,37 @@
  <header class="top">
   <div class="wrap">
    <a class="mark" href="#top">hamza <b>tauqeer</b></a>
-   <nav aria-label="Page sections"><a href="#check">Try the check</a><a href="#work">Work I’ve led</a><a
-     href="#audit">Free audit</a><a href="#next">After the audit</a><a href="#thinking">How I think</a><a
-     href="#background">Background</a></nav>
+   <nav aria-label="Page sections"><a href="#check">Try the check</a><a href="#work">Selected work</a><a href="#how">How
+     it works</a><a href="#audit">Free audit</a><a href="#background">Background</a></nav>
   </div>
  </header>
 
  <main id="top">
   <section class="hero">
    <div class="wrap">
-    <h1>A task your team repeats by hand every week is a bill you pay in hours.</h1>
-    <p class="lede">Nobody sees the invoice. The hours get absorbed, the errors get fixed quietly, and the one person
-     who knows how it works can’t take a holiday.</p>
-    <p class="lede">I’m Hamza Tauqeer, founder of Idea Section. In a free 30-minute audit I look at one of those
-     workflows, put a number on it, and tell you whether to automate it, fix it, or leave it alone. Leaving it alone is
-     a real answer, and I’ll say so when it’s true.</p>
-    <div class="cta-row"><a class="btn" href="https://gumdrop.ai/hamzatauqeer?rebrand_from=supercal" target="_blank"
-      rel="noopener">Book a free workflow audit</a><a href="#check">Or try the 2-minute check first</a></div>
-    <p class="fine">30 minutes. You keep the written summary either way. I take three audits a month.</p>
-    <ul class="facts">
-     <li><strong>Since 2017</strong> building and fixing software</li>
-     <li><strong>6M+</strong> connected devices on a platform I led the backend for</li>
-     <li><strong>Up to 14</strong> engineers led on one platform</li>
-    </ul>
+    <div>
+     <h1>A task repeated by hand every week is a bill paid in hours.</h1>
+     <p class="lede">I’m Hamza Tauqeer, founder of Idea Section. In a free 30-minute audit, I tell you whether to
+      automate it, fix it, or leave it alone.</p>
+     <div class="cta-row"><a class="btn" href="https://gumdrop.ai/hamzatauqeer?rebrand_from=supercal" target="_blank"
+       rel="noopener">Book a free workflow audit</a><a href="#check">Try the 2-minute check</a></div>
+     <ul class="chips">
+      <li>Building software since 2017</li>
+      <li>6M+ connected devices</li>
+      <li>Teams of up to 14 engineers</li>
+     </ul>
+    </div>
+    <svg class="fork" viewBox="0 0 380 300" role="img"
+     aria-label="A workflow splits into three paths: automate, fix, or leave it alone.">
+     <path class="ln" d="M39 150 C110 150 120 50 200 50" />
+     <path class="ln" d="M39 150 H200" />
+     <path class="ln" d="M39 150 C110 150 120 250 200 250" />
+     <circle class="nd" cx="30" cy="150" r="9" /><text class="sm" x="0" y="188">Your workflow</text>
+     <circle class="en" cx="200" cy="50" r="7" />
+     <circle class="en" cx="200" cy="150" r="7" />
+     <circle class="en" cx="200" cy="250" r="7" />
+     <text x="220" y="56">Automate</text><text x="220" y="156">Fix</text><text x="220" y="256">Leave it alone</text>
+    </svg>
    </div>
   </section>
 
@@ -482,8 +820,8 @@
    <div class="wrap">
     <h2>Try it on your own workflow</h2>
     <div class="body">
-     <p class="intro">Think of one task that bothers you. Answer five questions and I’ll tell you which way I’d lean.
-      This is a rough first read from five answers. The audit looks at the real workflow.</p>
+     <p class="sub">Think of one task that bothers you. Five questions, one rough answer. It’s a first read, not a
+      diagnosis.</p>
      <form id="check-form" novalidate>
       <fieldset>
        <legend>How often does the task happen?</legend>
@@ -518,108 +856,167 @@
    </div>
   </section>
 
-  <section class="s" id="work">
+  <section class="s wide" id="work">
    <div class="wrap">
-    <h2>Work I’ve led</h2>
-    <div class="body">
-     <p class="fine" style="margin-top:0">Client names stay private.</p>
-     <article class="story">
-      <h3>We rebuilt the same cloud stack 32 times</h3>
-      <p class="r">Technical lead, 12 to 14 engineers</p>
-      <p>The first version ran on a managed serverless framework built for a team of one or two. Then 12 to 14 engineers
-       started deploying to it. Stacks locked, rollbacks failed, and about 32 times in a few months we tore everything
-       down and rebuilt it. The team lost 24 to 30 hours a week to troubleshooting and regression testing.</p>
-      <p>I brought evidence: every failure, the hours it cost, and the framework’s known limits, checked with a former
-       AWS engineer. I took it to the client’s principal solution architect, who had 16+ years of experience. He
-       approved the change.</p>
-      <p>We moved the backend to roughly 80% containers and 20% serverless functions and left the frontend alone,
-       because rebuilding both would have blown the MVP budget. The rebuilds stopped. Each brand’s data stayed isolated
-       from the others, and the team could ship independently again.</p>
-     </article>
-     <article class="story">
-      <h3>A dashboard out of sync, and a client who began to doubt us</h3>
-      <p class="r">Team lead and delivery lead, on a smart-home platform with 6M+ connected devices</p>
-      <p>At the second meeting after kickoff, the client’s energy dashboard no longer matched reality. He started
-       questioning whether we could deliver. The backend and data teams were each pointing at the other.</p>
-      <p>I was the lead, so it was mine to fix. I took it to my manager and director, then sat down with the data lead
-       directly. I told him that if the project works we all succeed, and if it fails we all fail, and that backend
-       would give him whatever support he needed. We delivered the milestone on time.</p>
-      <p>The same project moved a legacy backend from AWS to Azure, serving roughly 1M+ users, and was load-tested with
-       1M devices in batch.</p>
-     </article>
-     <article class="story">
-      <h3>Receipts read by AI, checked by a person</h3>
-      <p class="r">Delivered the MVP of an AI bookkeeping platform</p>
-      <p>Someone has to type every receipt into the books. We built a custom OCR model to read them and a review screen
-       where a person confirms or corrects each field. Every correction goes back into training, so the model improves
-       over time.</p>
-      <p>The person stays in the loop on purpose. I think AI should do the typing, and someone accountable should check
-       the result.</p>
-     </article>
+    <h2>Selected work</h2>
+    <p class="sub">Client names stay private. Open a card for the story.</p>
+    <div class="cards">
+     <details class="card">
+      <summary>
+       <p class="role">Technical lead, TkXel</p>
+       <h3>We rebuilt the same cloud stack 32 times</h3>
+       <p class="gist">Ended a cycle that cost a team of 12 to 14 about 24 to 30 hours a week.</p>
+       <p class="key">From 32 rebuilds to none</p>
+       <ul class="chips">
+        <li>Multi-tenant SaaS</li>
+        <li>AWS ECS</li>
+        <li>Lambda</li>
+        <li>EventBridge</li>
+       </ul>
+       <span class="tog"></span>
+      </summary>
+      <div class="more">
+       <p>The first version ran on a managed serverless framework built for a team of one or two. With 12 to 14
+        engineers deploying to it, stacks locked and rollbacks failed. About 32 times in a few months, we tore
+        everything down and rebuilt.</p>
+       <p>I brought evidence: every failure, the hours lost, and the framework’s known limits, checked with a former AWS
+        engineer. The client’s principal solution architect, who had 16+ years of experience, approved the change.</p>
+       <p>We moved the backend to roughly 80% containers and 20% serverless functions and left the frontend alone to
+        protect the MVP budget. The rebuilds stopped, each brand’s data stayed isolated, and the team could ship
+        independently again.</p>
+      </div>
+     </details>
+
+     <details class="card">
+      <summary>
+       <p class="role">Team lead and delivery lead, TkXel</p>
+       <h3>A dashboard out of sync, and a client who began to doubt us</h3>
+       <p class="gist">Turned a client escalation into an on-time milestone.</p>
+       <p class="key">6M+ connected devices</p>
+       <ul class="chips">
+        <li>IoT</li>
+        <li>Azure</li>
+        <li>NestJS</li>
+        <li>MQTT</li>
+       </ul>
+       <span class="tog"></span>
+      </summary>
+      <div class="more">
+       <p>At the second meeting after kickoff, the client’s energy dashboard no longer matched reality, and he began to
+        question whether we could deliver. Backend and data were each pointing at the other.</p>
+       <p>I was the lead, so it was mine to fix. I took it to my manager and director, then sat down with the data lead
+        directly: if the project works we all succeed, and if it fails we all fail. I committed backend support to
+        unblock his work, and we delivered the milestone on time.</p>
+       <p>The same project moved a legacy backend from AWS to Azure, serving roughly 1M+ users, and was load-tested with
+        1M devices in batch.</p>
+      </div>
+     </details>
+
+     <details class="card">
+      <summary>
+       <p class="role">Delivered the MVP</p>
+       <h3>Receipts read by AI, checked by a person</h3>
+       <p class="gist">AI does the typing. A person approves it.</p>
+       <p class="key">Human in the loop</p>
+       <ul class="chips">
+        <li>OCR</li>
+        <li>Vue.js</li>
+        <li>NestJS</li>
+        <li>AWS</li>
+       </ul>
+       <span class="tog"></span>
+      </summary>
+      <div class="more">
+       <p>Someone has to type every receipt into the books. We built a custom OCR model to read them and a review screen
+        where a person confirms or corrects each field. Every correction goes back into training, so the model improves
+        over time.</p>
+       <p>The person stays in the loop on purpose. I think AI should do the typing, and someone accountable should check
+        the result.</p>
+      </div>
+     </details>
     </div>
+    <p class="fine"><a href="https://ideasection.com/work/" target="_blank" rel="noopener">More work on
+      ideasection.com</a></p>
    </div>
   </section>
 
-  <section class="s tint" id="audit">
+  <section class="s tint wide" id="how">
+   <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sub">Seven steps, each with a decision you’re part of. The same approach Idea Section follows on every
+     engagement.</p>
+    <div class="phases" aria-hidden="true"><span style="grid-column:1/4">Clarify</span><span
+      style="grid-column:4/6">Build</span><span style="grid-column:6/8">Deliver</span></div>
+    <ol class="steps7">
+     <li><span class="n">1</span>
+      <div><small>Clarify</small><b>Understand</b><span class="d">Is this the right problem?</span></div>
+     </li>
+     <li><span class="n">2</span>
+      <div><b>Define</b><span class="d">What’s in scope, and what isn’t?</span></div>
+     </li>
+     <li><span class="n">3</span>
+      <div><b>Design</b><span class="d">Which path fits?</span></div>
+     </li>
+     <li><span class="n">4</span>
+      <div><small>Build</small><b>Build</b><span class="d">Does it match what we agreed?</span></div>
+     </li>
+     <li><span class="n">5</span>
+      <div><b>Validate</b><span class="d">Does it meet the criteria?</span></div>
+     </li>
+     <li><span class="n">6</span>
+      <div><small>Deliver</small><b>Deliver</b><span class="d">Is it ready to go live?</span></div>
+     </li>
+     <li><span class="n">7</span>
+      <div><b>Improve</b><span class="d">What’s worth doing next?</span></div>
+     </li>
+    </ol>
+    <p class="legend"><i></i>The free audit is a short first pass through steps 1 to 3.</p>
+    <div class="after"><span>After the audit, work usually falls into:</span>
+     <ul class="chips">
+      <li>Software product and engineering</li>
+      <li>AI and workflow automation</li>
+      <li>Data and business intelligence</li>
+     </ul>
+    </div>
+    <p class="fine" style="margin-top:0"><a href="https://ideasection.com/approach/" target="_blank" rel="noopener">See
+      the full approach</a></p>
+   </div>
+  </section>
+
+  <section class="s" id="audit">
    <div class="wrap">
     <h2>The free workflow audit</h2>
     <div class="body">
-     <p>One workflow. Thirty minutes. A written answer.</p>
-     <ol class="steps">
-      <li>You book a time and answer a few short questions about the workflow.</li>
-      <li>On the call, you walk me through how it works today and what it costs you.</li>
-      <li>Afterwards you get a short written summary: where time and money are leaking, and whether I’d automate it, fix
-       it, or leave it alone.</li>
+     <ol class="mini">
+      <li><b>Book</b><span>A short form about one workflow.</span></li>
+      <li><b>Talk</b><span>30 minutes on how it works and what it costs.</span></li>
+      <li><b>Read</b><span>A written summary: automate, fix, or leave it alone.</span></li>
      </ol>
-     <p>If it makes sense to work together after that, I’ll say so. If it doesn’t, you keep the summary.</p>
-     <p>It fits businesses of roughly 20 to 200 people with a manual or fragmented process. It won’t help if you only
-      want a quote for a project that’s already fully specified. I take three audits a month so each one gets proper
-      attention.</p>
-     <p style="margin-top:1.5rem"><a class="btn" href="https://gumdrop.ai/hamzatauqeer?rebrand_from=supercal"
-       target="_blank" rel="noopener">Book a free workflow audit</a></p>
-     <p class="fine">No cost. No credit card. Takes about a minute to book.</p>
+     <div class="fit">
+      <div><b>A good fit</b><span>Businesses of roughly 20 to 200 people with a manual or fragmented process.</span>
+      </div>
+      <div><b>Not a fit</b><span>A quote for a project that’s already fully specified.</span></div>
+     </div>
+     <p><a class="btn" href="https://gumdrop.ai/hamzatauqeer?rebrand_from=supercal" target="_blank" rel="noopener">Book
+       a free workflow audit</a></p>
+     <p class="fine">No cost. No credit card. I take three audits a month.</p>
     </div>
    </div>
   </section>
 
-  <section class="s" id="next">
+  <section class="s tint" id="principles">
    <div class="wrap">
-    <h2>After the audit</h2>
-    <div class="body">
-     <p>If we work together, it takes one of three forms. You’ll hear the cost and the trade-offs in plain language
-      before anything is built.</p>
-     <ul class="beliefs">
-      <li><b>Build.</b><span>An automation or AI-assisted workflow, with a person reviewing the output wherever a
-        mistake would be costly.</span></li>
-      <li><b>Repair.</b><span>Architecture, data model, performance, or security work on a system you already have, so
-        you don’t have to replace it.</span></li>
-      <li><b>Advise.</b><span>Ongoing technical guidance for a product team: reviewing decisions, trade-offs, and
-        vendors before money is committed.</span></li>
-     </ul>
-    </div>
-   </div>
-  </section>
-
-  <section class="s tint" id="thinking">
-   <div class="wrap">
-    <h2>How I think</h2>
-    <div class="body">
-     <p>I’ve worked with teams across the US, Europe, Australia, and Asia. The same thing kept showing up: the
-      technology was explainable, but the decisions, costs, and risks often weren’t explained to the client in plain
-      language. I believe too many clients end up paying for features they don’t need while the problem they came with
-      stays open. I started Idea Section to be the partner who understands your actual situation first, then recommends
-      the right solution, even when that’s no solution yet.</p>
-     <ul class="beliefs">
-      <li><b>Validate before you invest.</b><span>Too many people spend serious money building an idea nobody
-        checked.</span></li>
-      <li><b>Understand the problem before you build.</b><span>A checklist of deliverables can be fully delivered while
-        the original problem stays open.</span></li>
-      <li><b>Sometimes the right answer is to build nothing yet.</b><span>Other times it’s improving what you already
-        have, or automating one step.</span></li>
-      <li><b>Know what you’re paying for.</b><span>You should hear why something is being built, what it costs, and what
-        the trade-offs are, in plain language.</span></li>
-      <li><b>Keep a person accountable for AI.</b><span>AI output needs checking in context before it drives a
-        decision.</span></li>
+    <h2>What I hold myself to</h2>
+    <div class="body" style="max-width:44em">
+     <p class="sub">Working with teams across regions and time zones, I kept running into the same gap: a lack of
+      clarity and transparency.</p>
+     <ul class="holds">
+      <li><b>Start with the problem</b><span>The business result comes first. Technology comes second.</span></li>
+      <li><b>Recommend what fits</b><span>Even when that’s nothing yet.</span></li>
+      <li><b>Be transparent</b><span>Scope, costs, and limits in plain language.</span></li>
+      <li><b>Agree how success is judged</b><span>Before anything is built.</span></li>
+      <li><b>Keep a person accountable for AI</b><span>Check its output in context before it drives a decision.</span>
+      </li>
      </ul>
     </div>
    </div>
@@ -630,24 +1027,53 @@
     <h2>Background</h2>
     <dl class="bg body">
      <dt>How I got here</dt>
-     <dd>I started in 2017 as an intern. Since then I’ve built the backend of a telehealth platform, moved from PHP to
-      the JavaScript stack, built SaaS products, mentored engineers, and given an upskilling lecture to a company’s
-      employees. I’ve led teams of up to 14 engineers and worked with colleagues in the US, UK, Australia, Singapore,
-      Ukraine, Spain, and Dubai.</dd>
+     <dd>I started in 2017 as an intern. Since then: a telehealth platform, SaaS products, a platform with 6M+ connected
+      devices, and teams of up to 14 engineers. I mentor engineers and have given an upskilling lecture to a company’s
+      employees.</dd>
      <dt>How I work</dt>
-     <dd>I’m the founder and I’m responsible for delivery. When a project needs more hands, I bring in engineers, QA,
-      and designers I’ve worked with before, per project.</dd>
-     <dt>Technologies I’ve worked with</dt>
-     <dd>Node.js, NestJS, TypeScript, React, PostgreSQL, MongoDB, Redis, AWS, Azure, Docker, Kubernetes, MQTT, and
-      OpenAI APIs.</dd>
-     <dt>Check my background</dt>
-     <dd>My roles are listed on LinkedIn, and experience letters are available on request.</dd>
+     <dd>I’m responsible for delivery. When a project needs more hands, I bring in engineers, QA, and designers I’ve
+      worked with before, per project.</dd>
+     <dt>Technologies</dt>
+     <dd class="c">
+      <ul class="chips">
+       <li>Node.js</li>
+       <li>NestJS</li>
+       <li>TypeScript</li>
+       <li>React</li>
+       <li>Vue.js</li>
+       <li>PostgreSQL</li>
+       <li>MongoDB</li>
+       <li>Redis</li>
+       <li>AWS</li>
+       <li>Azure</li>
+       <li>Docker</li>
+       <li>Kubernetes</li>
+       <li>MQTT</li>
+       <li>OpenAI APIs</li>
+      </ul>
+     </dd>
      <dt>Courses completed</dt>
-     <dd>Claude 101, Claude Code 101, and Introduction to Claude Cowork (Anthropic, 2026). Business Analysis for
-      Pre-sales Professionals and Beginning Amazon Web Services (10Pearls University, 2024).</dd>
-     <dt>Where I’m based</dt>
-     <dd>Lahore, Pakistan. I work with clients in the US, Europe, and Australia.</dd>
+     <dd class="c">
+      <ul class="chips">
+       <li>Claude 101 (Anthropic)</li>
+       <li>Claude Code 101 (Anthropic)</li>
+       <li>Introduction to Claude Cowork (Anthropic)</li>
+       <li>Business Analysis for Pre-sales (10Pearls University)</li>
+       <li>Beginning Amazon Web Services (10Pearls University)</li>
+      </ul>
+     </dd>
+     <dt>Based in</dt>
+     <dd>Lahore, Pakistan. Clients in the US, Europe, and Australia.</dd>
     </dl>
+   </div>
+  </section>
+
+  <section class="close">
+   <div class="wrap">
+    <h2>Let’s look at one workflow.</h2>
+    <div class="cta-row"><a class="btn" href="https://gumdrop.ai/hamzatauqeer?rebrand_from=supercal" target="_blank"
+      rel="noopener">Book a free workflow audit</a><a href="mailto:hello@ideasection.com">Or email
+      hello@ideasection.com</a></div>
    </div>
   </section>
  </main>
